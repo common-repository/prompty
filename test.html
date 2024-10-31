@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>prompty test</title>
+<script language="javascript" src="prompty.js">></script>
+</head>
+
+<body> 
+<pre class="dummy prompty">
+
+% ls 
+README.txt      conf.xml      conf.xml.org    conf.xml.org2  
+text.txt        text2.txt     text3.txt
+
+% pwd
+/home/paul/dev
+% su scott
+[scott@server1] % ls
+README.txt      conf.xml      conf.xml.org    conf.xml.org2  
+text.txt        text2.txt     text3.txt
+[scott@server1] % pwd
+/home/paul/dev
+
+
+
+</pre>
+<hr/>
+<pre class="prompty" style="border:1px solid black; padding:4px; background-color:pink">
+
+% ls 
+README.txt      conf.xml      conf.xml.org    conf.xml.org2  
+text.txt        text2.txt     text3.txt
+
+% pwd
+/home/paul/dev
+% su
+# ls /sbin
+shutdown        halt          poweroff 
+# /sbin/poweroff
+shutting down the system...
+</pre>
+<hr/>
+<pre >
+% ls 
+README.txt      conf.xml      conf.xml.org    conf.xml.org2  
+text.txt        text2.txt     text3.txt
+
+% pwd
+/home/paul/dev
+% 
+</pre>
+
+<script language="javascript">
+prompty.setup();
+prompty.prompts = ['% ', '# ', '[scott@server1] % ' ];
+</script>
+</body>
+</html>
